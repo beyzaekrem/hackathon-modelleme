@@ -1,0 +1,17 @@
+ECOSYSTEM WATER RESILIENCE ASSESSMENT
+
+Overall Vulnerability: Moderate
+Ecosystems show moderate water sensitivity, with some areas requiring monitoring and adaptive management.
+
+Risk Distribution:
+- High Sensitivity (≥0.7): 2.2% (7 ecosystems)
+- Medium Sensitivity (0.4-0.7): 64.2% (208 ecosystems)
+- Low Sensitivity (<0.4): 33.6% (109 ecosystems)
+
+Spatial Pattern: Moderate
+High-sensitivity ecosystems show moderate spatial clustering.
+
+Key Concerns:
+1. High groundwater dependency suggests ecosystems may be vulnerable to aquifer depletion or contamination.
+2. Low score variability indicates uniform vulnerability patterns across ecosystems.
+3. 'National Park' ecosystems show the highest average sensitivity (0.554).

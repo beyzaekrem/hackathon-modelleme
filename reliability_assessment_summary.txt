@@ -1,0 +1,198 @@
+ECOSYSTEM WATER RESILIENCE MODEL: RELIABILITY ASSESSMENT SUMMARY
+====================================================================
+
+OVERALL RELIABILITY RATING: ⚠️ MODERATE
+
+Suitable for: Relative ranking, spatial pattern identification
+Not suitable for: Absolute risk quantification, threshold-based decisions
+
+═══════════════════════════════════════════════════════════════════════════
+
+KEY DATA LIMITATIONS
+
+1. WETLAND PROXIMITY RISK: 93.5% ZERO VALUES
+   • Only 21 ecosystems (6.5%) have non-zero wetland proximity risk
+   • Despite 20% weight, contributes only 1.3% to final scores
+   • Indicates major data coverage gap or methodological limitation
+   Impact: HIGH - Component effectively non-functional
+
+2. DROUGHT EXPOSURE: 9.9% ZERO VALUES
+   • 32 ecosystems show zero drought exposure
+   • May indicate data gaps or spatial coverage issues
+   • 50km buffer radius arbitrary, not validated
+   Impact: MODERATE - Affects 48.7% of final scores
+
+3. GROUNDWATER SENSITIVITY: COARSE CLASSIFICATION
+   • Only 4 unique normalized values (0.0, 0.33, 0.67, 1.0)
+   • Ordinal mapping (0.2, 0.5, 0.8) not validated
+   • Missing continuous metrics (recharge, extraction pressure)
+   Impact: HIGH - Affects 48.9% of final scores
+
+4. PROTECTED AREA IMPORTANCE: MINIMAL VARIATION
+   • Mean importance: 0.036 (very low)
+   • Contributes only 1.1% to final scores despite 15% weight
+   • Based only on area and park type, missing biodiversity factors
+   Impact: LOW - Minimal contribution to final scores
+
+═══════════════════════════════════════════════════════════════════════════
+
+POTENTIAL BIAS
+
+1. WEIGHTING SCHEME BIAS: UNVALIDATED WEIGHTS
+   • Intended weights differ significantly from actual contributions:
+     - Drought: 48.7% actual vs. 35% intended
+     - Groundwater: 48.9% actual vs. 30% intended
+     - Wetland: 1.3% actual vs. 20% intended
+     - Importance: 1.1% actual vs. 15% intended
+   • Weights not empirically validated against observed impacts
+   Impact: HIGH - Structural bias toward drought and groundwater
+
+2. AGGREGATION BIAS: MAXIMUM OVERESTIMATION
+   • Uses maximum value for overlapping zones
+   • Assumes worst-case scenario, potentially overestimating risk
+   • Ignores spatial extent of overlap
+   Impact: MODERATE - May overestimate risk for partially overlapping zones
+
+3. NORMALIZATION BIAS: RELATIVE SCORING
+   • Min-max normalization creates relative scores, not absolute risk
+   • Scores depend on dataset composition
+   • Cannot compare across different datasets or time periods
+   Impact: MODERATE - Limits absolute risk interpretation
+
+═══════════════════════════════════════════════════════════════════════════
+
+UNCERTAINTY SOURCES
+
+1. MEASUREMENT UNCERTAINTY
+   • SPI to severity conversion: (3 - SPI) / 6 not validated
+   • Groundwater sensitivity mapping (0.2, 0.5, 0.8) assumes equal intervals
+   Uncertainty Level: HIGH
+
+2. SPATIAL UNCERTAINTY
+   • 50km drought buffer radius arbitrary, not validated
+   • 5km wetland proximity threshold arbitrary, excludes 93.5% of ecosystems
+   • Multiple CRS transformations may introduce minor spatial errors
+   Uncertainty Level: HIGH
+
+3. MODEL STRUCTURE UNCERTAINTY
+   • Only 4 components, may miss important factors (surface water, water quality, land use)
+   • Linear additive model assumes no interactions or threshold effects
+   • No uncertainty quantification or propagation
+   Uncertainty Level: MODERATE-HIGH
+
+4. TEMPORAL UNCERTAINTY
+   • Single time period analysis, no trends or projections
+   • No seasonal patterns or multi-year drought assessment
+   Uncertainty Level: MODERATE
+
+═══════════════════════════════════════════════════════════════════════════
+
+RECOMMENDATIONS TO IMPROVE ACCURACY
+
+PRIORITY 1: IMMEDIATE ACTIONS (0-6 months)
+1. Expand wetland data coverage
+   • Audit wetland dataset completeness
+   • Expand proximity threshold or use distance-decay function
+   • Expected Impact: HIGH
+
+2. Validate and recalibrate weights
+   • Collect observed impact data
+   • Use regression/ML to identify optimal weights
+   • Expected Impact: HIGH
+
+3. Implement area-weighted aggregation
+   • Replace maximum with area-weighted mean
+   • Expected Impact: MODERATE
+
+PRIORITY 2: SHORT-TERM ACTIONS (6-12 months)
+4. Develop continuous groundwater metrics
+   • Integrate recharge rates, extraction pressure
+   • Replace ordinal classification
+   • Expected Impact: HIGH
+
+5. Multi-temporal drought analysis
+   • Integrate multiple SPI time scales
+   • Calculate drought frequency/duration
+   • Expected Impact: MODERATE-HIGH
+
+6. Develop absolute risk thresholds
+   • Map observed impacts to model scores
+   • Establish validated thresholds
+   • Expected Impact: MODERATE-HIGH
+
+PRIORITY 3: LONG-TERM ACTIONS (12+ months)
+7. Independent validation
+   • Collect observed impact data
+   • Compare predictions to observations
+   • Expected Impact: CRITICAL
+
+8. Uncertainty quantification
+   • Quantify input uncertainty
+   • Use Monte Carlo simulation
+   • Report confidence intervals
+   • Expected Impact: HIGH
+
+9. Model structure improvements
+   • Add missing components (surface water, water quality, land use)
+   • Test non-linear models
+   • Expected Impact: MODERATE-HIGH
+
+═══════════════════════════════════════════════════════════════════════════
+
+RELIABILITY RATINGS BY ASPECT
+
+Data Completeness:     ⚠️ MODERATE  (93.5% zero wetland risk)
+Data Quality:          ✅ GOOD      (No missing values, valid geometries)
+Methodological Rigor:  ⚠️ MODERATE  (Unvalidated weights, arbitrary thresholds)
+Spatial Accuracy:       ✅ GOOD      (Valid geometries, adequate CRS)
+Temporal Coverage:      ⚠️ LIMITED   (Single time period)
+Uncertainty Quantification: ❌ POOR   (None implemented)
+Validation:            ❌ NONE       (No independent validation)
+
+═══════════════════════════════════════════════════════════════════════════
+
+APPROPRIATE USE CASES
+
+✅ SUITABLE FOR:
+• Relative ranking of ecosystems
+• Spatial pattern identification
+• Exploratory analysis
+• Policy prioritization (relative)
+
+❌ NOT SUITABLE FOR:
+• Absolute risk quantification
+• Threshold-based decision-making
+• Temporal trend analysis
+• Precise impact prediction
+• Regulatory compliance
+
+═══════════════════════════════════════════════════════════════════════════
+
+CONFIDENCE LEVELS BY SCORE RANGE
+
+0.0 - 0.3: ⚠️ LOW        (Limited discrimination, may reflect data gaps)
+0.3 - 0.5: ✅ MODERATE    (Reasonable reliability for relative ranking)
+0.5 - 0.7: ✅ MODERATE-HIGH (Good reliability for relative ranking)
+0.7 - 1.0: ⚠️ MODERATE    (High scores reliable, but absolute values uncertain)
+
+Note: Confidence reflects relative reliability within dataset, not absolute risk.
+
+═══════════════════════════════════════════════════════════════════════════
+
+CONCLUSION
+
+The model provides MODERATE RELIABILITY for relative vulnerability ranking but
+contains significant limitations affecting absolute risk interpretation:
+
+• Major data coverage gaps (93.5% zero wetland risk)
+• Component imbalance (weights differ from actual contributions)
+• Methodological uncertainties (arbitrary thresholds, unvalidated weights)
+• No uncertainty quantification or independent validation
+
+RECOMMENDATION: Use for relative ranking and spatial patterns, but NOT for
+absolute risk quantification or threshold-based decisions without validation.
+
+Next Steps: Implement Priority 1 recommendations (wetland data expansion, weight
+validation, area-weighted aggregation) before using for critical decisions.
+
+═══════════════════════════════════════════════════════════════════════════

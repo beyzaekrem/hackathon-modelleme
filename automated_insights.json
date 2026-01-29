@@ -1,0 +1,42 @@
+{
+  "generated_date": "2026-01-29",
+  "insights": [
+    {
+      "type": "key_risk",
+      "icon": "🔴",
+      "title": "Key Risk Insight",
+      "text": "100% of high-risk ecosystems depend on sensitive groundwater aquifers, creating universal vulnerability to over-extraction and contamination that threatens ecosystem water supply across all high-priority protected areas.",
+      "priority": "high"
+    },
+    {
+      "type": "resilience_opportunity",
+      "icon": "🟢",
+      "title": "Resilience Opportunity",
+      "text": "150 ecosystems (46% of total) are currently in medium-risk status, representing a critical window for preventive intervention before they transition to high-risk under projected climate change impacts.",
+      "priority": "medium"
+    },
+    {
+      "type": "urgent_warning",
+      "icon": "⚠️",
+      "title": "Urgent Warning",
+      "text": "The Southeast region shows 58.8% of ecosystems in high-risk status—nearly three times the national average—with dual-stressor exposure from elevated drought and sensitive groundwater requiring immediate regional intervention.",
+      "priority": "critical"
+    },
+    {
+      "type": "positive_signal",
+      "icon": "✅",
+      "title": "Positive Signal",
+      "text": "The Northeast region demonstrates significantly lower vulnerability (4.3% high-risk vs. 20.1% national average), providing a model for resilience factors that can be replicated in other regions to reduce overall ecosystem water stress.",
+      "priority": "low"
+    }
+  ],
+  "metadata": {
+    "total_ecosystems": 324,
+    "high_risk_count": 65,
+    "high_risk_percentage": 20.1,
+    "medium_risk_count": 150,
+    "medium_risk_percentage": 46.3,
+    "southeast_high_risk_percentage": 58.8,
+    "northeast_high_risk_percentage": 4.3
+  }
+}

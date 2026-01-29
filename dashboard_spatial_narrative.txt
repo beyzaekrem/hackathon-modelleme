@@ -1,0 +1,62 @@
+SPATIAL DISTRIBUTION OF ECOSYSTEM WATER SENSITIVITY
+
+The spatial distribution of ecosystem water sensitivity reveals a heterogeneous pattern across the protected area network, with significant regional variation and dispersed high-risk areas.
+
+REGIONAL CLUSTERING PATTERNS
+
+High-risk ecosystems (top 20%) are distributed across the entire study area, spanning 18.33° longitude and 5.71° latitude—covering 100% of the longitude range and 95.5% of the latitude range occupied by all protected ecosystems. However, regional analysis reveals significant concentration in the Southeast region.
+
+• Southeast Region: Highest vulnerability concentration
+  - 58.8% of ecosystems classified as high-risk (20 out of 34)
+  - Mean sensitivity: 0.583 (highest)
+  - Elevated drought exposure: 0.804
+  - Highest groundwater sensitivity: 0.956
+  - Dual-stressor pattern: Both climate and groundwater factors elevated
+
+• Southwest Region: Moderate-high vulnerability
+  - 20.0% high-risk ecosystems
+  - Mean sensitivity: 0.510
+  - Elevated drought: 0.701
+  - High groundwater sensitivity: 0.836
+
+• Northwest Region: Moderate vulnerability
+  - 18.6% high-risk ecosystems
+  - Mean sensitivity: 0.466
+  - Moderate drought and groundwater exposure
+
+• Northeast Region: Lowest vulnerability
+  - 4.3% high-risk ecosystems (lowest)
+  - Mean sensitivity: 0.375
+  - Lower drought exposure: 0.454
+  - More favorable conditions
+
+Spatial clustering analysis shows high-risk ecosystems have an average separation distance of 102.43 km, indicating dispersed rather than clustered vulnerability. However, the Southeast region shows pronounced concentration, suggesting regional drivers.
+
+CLIMATIC, HYDROLOGICAL, AND GEOLOGICAL DRIVERS
+
+Climate Drivers:
+Drought exposure shows negative correlations with both longitude (-0.247) and latitude (-0.237), indicating that western and southern regions experience higher drought stress. The Southeast region shows the highest drought exposure (0.804), consistent with its elevated vulnerability. This pattern suggests regional climate gradients, with continental influences in eastern regions and potential Mediterranean climate effects in southern regions creating varying precipitation patterns.
+
+Hydrological Drivers:
+Groundwater sensitivity shows moderate negative correlation with latitude (-0.256), indicating southern regions have higher aquifer sensitivity. The Southeast region shows the highest groundwater sensitivity (0.956), with 100% of high-risk ecosystems overlapping with highly sensitive aquifers. This pattern reflects underlying geological heterogeneity, where different geological formations create varying aquifer characteristics. The concentration of "Verimli" (efficient) aquifers in southern regions creates greater vulnerability to over-extraction.
+
+Geological Drivers:
+While explicit geological data is not included, the groundwater sensitivity patterns suggest underlying geological drivers. The dispersed pattern of high-risk ecosystems reflects geological heterogeneity, where different substrates (limestone, sandstone, alluvial deposits) create varying aquifer characteristics. The Southeast region's high vulnerability likely reflects specific geological conditions creating both sensitive aquifers and limited recharge capacity.
+
+CONSERVATION IMPLICATIONS
+
+1. Regional Priority: The Southeast region requires urgent intervention, with 58.8% of ecosystems in high-risk status. Conservation resources should be prioritized here, focusing on groundwater protection and drought adaptation.
+
+2. Multi-Regional Coordination: While Southeast shows concentration, high-risk ecosystems occur across all regions, requiring coordinated conservation efforts across multiple administrative boundaries.
+
+3. Regional-Specific Strategies: Significant regional variation (Southeast: 58.8% vs. Northeast: 4.3%) indicates need for region-specific adaptation strategies:
+   - Southeast: Urgent groundwater protection and drought adaptation
+   - Southwest: Preventive measures to maintain current conditions
+   - Northwest: Standard monitoring and maintenance
+   - Northeast: Document resilience factors for replication
+
+4. Climate-Hydrology Integration: The correlation between drought and groundwater patterns suggests integrated climate-hydrology adaptation strategies are needed, particularly in southern regions.
+
+5. Landscape-Scale Approach: The dispersed pattern and regional variation suggest landscape-scale conservation planning that considers regional climate, hydrological, and geological contexts.
+
+KEY FINDING: The Southeast region's pronounced vulnerability (58.8% high-risk) driven by dual-stressor exposure (high drought + sensitive groundwater) represents a conservation priority requiring immediate regional intervention while maintaining national coordination.
