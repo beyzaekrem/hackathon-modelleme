@@ -1,141 +1,117 @@
-# Su Stresi İstihbarat Dashboard'u
+![Python](https://img.shields.io/badge/python-3.10-blue)
+![Streamlit](https://img.shields.io/badge/streamlit-%23FF4B4B)
+![Status](https://img.shields.io/badge/status-completed-success)
+# Smart Water Stress Modeling Platform
 
-Bu proje, **GeoPandas** ile geliştirilmiş üç farklı su stresi analiz modelini içeren kapsamlı bir geospatial analiz pipeline'ıdır.
+A data-oriented modeling platform designed to evaluate water stress conditions using environmental and geographic data, developed as part of a hackathon project.
 
-## Modeller
+## Overview
 
-### Model 1: Tarımsal Su Stresi İstihbaratı
-Tarımsal bölgeler için su stresi skorunu hesaplar:
-- Tarımsal işletme sınırları ve yeraltı suyu gövdelerinin kesişimi
-- Kuraklık indeksi (SPI) özellikleri
+This repository contains a Python-based system for analyzing water stress across different regions. The platform uses environmental input data and performs modular calculations to assess water availability under various conditions. The project also includes a dashboard interface to visualize results and support decision making.
 
-### Model 2: Kentsel Su Stresi İstihbaratı
-Şehir düzeyinde su stresi analizi:
-- Nüfus basıncı
-- Su arzı tahmini
-- Şehir düzeyinde risk değerlendirmesi
+The system was developed in the context of a collaborative hackathon challenge focused on sustainable water management.
 
-### Model 3: Ekosistem Su Direnci İstihbaratı
-Korunan alanlar için su kırılganlığı analizi:
-- Kuraklık maruziyeti
-- Yeraltı suyu hassasiyeti
-- Sulak alan yakınlık riski
-- Korunan alan önemi
+## Motivation
 
-## Kurulum
+Water stress is a critical issue for agriculture, urban planning, and ecosystem sustainability. Traditional approaches often lack data-driven support for understanding local water stress conditions.
 
-1. Sanal ortam oluşturun ve bağımlılıkları yükleyin:
+The goal of this project is to provide a flexible and extensible framework for analyzing different stress factors related to water availability, with a user-friendly interface for interpretation and visualization.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
+## Key Features
+
+- Environmental data preprocessing and modeling  
+- Water stress evaluation modules  
+- Interactive visualization through a dashboard  
+- Modular code structure for future extension  
+- Designed for readability and reproducibility
+
+## Technologies Used
+
+This project is built using:
+
+- **Python** – Main development language  
+- **Pandas** – Data processing and analysis  
+- **GeoPandas** – Geospatial data support  
+- **Streamlit** – Dashboard interface  
+- **Jupyter Notebook** – Research and exploration  
+- **Git & GitHub** – Version control
+
+## Repository Structure
+
+The repository is organized as follows:
+
+📁 assets/ # Supporting static assets
+📁 datasets/ # Environmental and input datasets
+📁 water_stress_dashboard/ # Dashboard front-end files
+📄 app.py # Dashboard entry script
+📄 components.py # Modular helper functions
+📄 main.py # Main execution script
+📄 utils.py # Utility functions
+📄 water_stress_helpers.py # Water stress logic
+📄 requirements.txt # Project dependencies
+
+
+## Installation and Setup
+
+To run the system locally, follow these steps:
+
+1. Clone the repository:
+
+git clone https://github.com/beyzaekrem/hackathon-modelleme.git
+
+
+2. Navigate to the project folder:
+
+cd hackathon-modelleme
+
+
+3. Create a virtual environment and activate it:
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+
+4. Install the required packages:
+
 pip install -r requirements.txt
-```
 
-2. Giriş veri dosyalarınızı hazırlayın (GeoPandas tarafından desteklenen vektör formatları: Shapefile, GeoPackage, GeoJSON)
 
-## Dashboard Kullanımı
+## Running the Application
 
-Streamlit dashboard'unu çalıştırmak için:
+To start the dashboard:
 
-```bash
-streamlit run dashboards/streamlit_app.py
-```
+streamlit run water_stress_dashboard/app.py
 
-Dashboard şu özellikleri içerir:
-- 🌾 Tarımsal Su Stresi (Model 1)
-- 🏙️ Kentsel Su Stresi (Model 2)
-- 🌿 Ekosistem Su Direnci (Model 3)
 
-Her model için:
-- İnteraktif haritalar
-- En yüksek riskli bölgeler tablosu
-- Otomatik içgörüler
-- Skor ayrıştırması ve bileşen analizi
+## Example Usage
 
-## Modelleri Programatik Olarak Çalıştırma
+Example use cases include:
 
-### Model 1
+- Evaluating water stress for a specific dataset  
+- Examining dashboard output for multiple environmental conditions  
+- Modifying water stress logic for extended research
 
-```python
-from models.agriculture import build_agricultural_water_stress
+## What I Learned
 
-results = build_agricultural_water_stress(
-    agri_boundaries_path="data/tarım-işletme-sınırları.geojson",
-    groundwater_bodies_path="data/akifer-sınırları.geojson",
-    drought_index_path="data/kuraklık-spi-indeksi.geojson",
-    output_geojson_path="outputs/model1_water_stress.geojson",
-    output_csv_path="outputs/model1_water_stress.csv",
-)
-```
+This project demonstrates the following technical competencies:
 
-### Model 2
+- Data processing and transformation  
+- Modular Python project design  
+- Geospatial data handling with GeoPandas  
+- Interactive data visualization with Streamlit  
+- Experimentation in research context
 
-```python
-from models.urban import build_urban_water_stress
+## Future Improvements
 
-results = build_urban_water_stress(
-    city_boundaries_path="data/şehir-atlası-2019.geojson",
-    population_grid_path="data/nüfus-gridli-2024.geojson",
-    water_sources_path="data/içme-suyu-kaynakları.geojson",
-    dams_path="data/baraj-ve-göletler.geojson",
-    output_geojson_path="outputs/model2_urban_water_stress.geojson",
-    output_csv_path="outputs/model2_urban_water_stress.csv",
-)
-```
+The current version serves as a prototype and could be extended with:
 
-### Model 3
+- Real-time sensor data integration  
+- Advanced machine learning models for prediction  
+- Cloud-based deployment and API integration  
+- Support for additional environmental variables  
+- Enhanced visualization and reporting features
 
-```python
-from models.ecosystem import build_ecosystem_water_resilience
+## Author
 
-results = build_ecosystem_water_resilience(
-    wetlands_path="data/sulak-alanlar.geojson",
-    national_parks_path="data/milli-parklar.geojson",
-    nature_parks_path="data/tabiat-parkları.geojson",
-    groundwater_bodies_path="data/akifer-sınırları.geojson",
-    aquifer_boundaries_path="data/havza-sınırları.geojson",
-    drought_index_path="data/kuraklık-spi-indeksi.geojson",
-    fault_lines_path="data/diri-faylar.geojson",
-    output_geojson_path="outputs/model3_ecosystem_resilience.geojson",
-    output_csv_path="outputs/model3_ecosystem_resilience.csv",
-)
-```
-
-## Proje Yapısı
-
-```
-deneme/
-├── dashboards/          # Streamlit dashboard uygulaması
-│   └── streamlit_app.py
-├── models/              # Model implementasyonları
-│   ├── agriculture/     # Model 1
-│   ├── urban/           # Model 2
-│   └── ecosystem/       # Model 3
-├── outputs/             # Model çıktıları
-├── notebooks/           # Jupyter notebook'lar
-├── requirements.txt     # Python bağımlılıkları
-└── README.md           # Bu dosya
-```
-
-## Bağımlılıklar
-
-- geopandas >= 0.14, < 1.0
-- pandas >= 2.0, < 3.0
-- shapely >= 2.0, < 3.0
-- streamlit >= 1.40, < 2.0
-- folium >= 0.17, < 0.18
-- streamlit-folium >= 0.22, < 0.23
-
-## Analiz ve Raporlar
-
-Proje aşağıdaki analiz ve raporları içerir:
-
-- `executive_summary_ecosystem_resilience.md` - Üst düzey karar vericiler için özet
-- `model_reliability_assessment.md` - Model güvenilirlik değerlendirmesi
-- `spatial_distribution_narrative.md` - Mekansal dağılım analizi
-- `automated_insights.txt` - Otomatik içgörüler
-
-## Lisans
-
-Bu proje açık kaynak kodludur.
+Developed by **Beyza Ekrem**  
+Computer Engineering Student
